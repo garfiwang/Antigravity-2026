@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "skills": {
+    "antigravity-draw": {
+      "source": "mathruffian-dot/antigravity-lazy-pack",
+      "sourceType": "github",
+      "skillPath": "skills/04-draw/SKILL.md",
+      "computedHash": "7389bc0fd3c96b38509e00a5f4975cf47069a74a0c55fd444295666e976559a5"
+    },
+    "antigravity-firebase": {
+      "source": "mathruffian-dot/antigravity-lazy-pack",
+      "sourceType": "github",
+      "skillPath": "skills/03-firebase/SKILL.md",
+      "computedHash": "1a5124bece8a4413ebc2931b2ffa6ea5ae3f0bf3dffa1d9899e8a1e8e04c89c4"
+    },
+    "antigravity-github": {
+      "source": "mathruffian-dot/antigravity-lazy-pack",
+      "sourceType": "github",
+      "skillPath": "skills/02-github/SKILL.md",
+      "computedHash": "061b0f4786d4d04dec3df192d3515de4ca946a4828780170caa4c64a9dbb7309"
+    },
+    "antigravity-notebooklm": {
+      "source": "mathruffian-dot/antigravity-lazy-pack",
+      "sourceType": "github",
+      "skillPath": "skills/01-notebooklm/SKILL.md",
+      "computedHash": "3a53816b155170c41f45b7aa1db4399d3e2d4ea566e881b7db7931d42be25820"
+    },
+    "antigravity-obsidian": {
+      "source": "mathruffian-dot/antigravity-lazy-pack",
+      "sourceType": "github",
+      "skillPath": "skills/06-obsidian/SKILL.md",
+      "computedHash": "a813270a62b5b2b511a5a7050cc92e640a00c6a52f23ef256961abfd4a132167"
+    },
+    "antigravity-workflow": {
+      "source": "mathruffian-dot/antigravity-lazy-pack",
+      "sourceType": "github",
+      "skillPath": "skills/05-workflow/SKILL.md",
+      "computedHash": "9a80383ae7abde449b5f1a6ebd6b17c2ad93d67b0e3b35cdd43d610c6ef37eff"
+    }
+  }
+}
