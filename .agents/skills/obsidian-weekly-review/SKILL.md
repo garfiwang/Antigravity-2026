@@ -1,6 +1,12 @@
 ---
 name: obsidian-weekly-review
-description: Obsidian 每週知識重整技能。每週日執行，負責整理每日筆記、清空收件匣、更新專案狀態、清理孤兒筆記與封存過期內容，並產出每週回顧報告。
+version: 1.0.0
+description: >
+  Obsidian 每週知識重整技能。每週日執行，負責整理每日筆記、清空收件匣、更新專案狀態、清理孤兒筆記與封存過期內容，並產出每週回顧報告。
+changelog:
+  - version: 1.0.0
+    date: 2026-07-05
+    note: 初始版本
 ---
 
 # Obsidian 每週知識重整技能 (Weekly Review)
