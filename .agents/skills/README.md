@@ -10,7 +10,7 @@
 | :--- | :--- | :--- | :--- | :--- |
 | **🚀 開工接續 (`startup`)** | `v1.0.0` | `開工` `開始工作` `上次做到哪` | 三層級自動偵測開工脈絡接續助手（讀取交接檔與 Git 狀態） | [說明檔](startup/README.md) |
 | **🛑 收工同步 (`shutdown`)** | `v1.0.0` | `收工` `結束了` `準備換電腦` | 三層級自動偵測收工同步助手（寫入交接檔、Git Commit/Push、Obsidian） | [說明檔](shutdown/README.md) |
-| **🏗️ 專案初始化 (`project-init`)** | `v1.0.0` | `初始化專案` `init 專案` | 自動建立專案藍圖 (`AGENTS.md`) 與交接檔 (`handoff.md`) | - |
+| **🏗️ 專案初始化 (`project-init`)** | `v1.1.0` | `初始化專案` `init 專案` | 自動建立專案藍圖 (`AGENTS.md`) 與交接檔 (`handoff.md`) | [說明檔](project-init/README.md) |
 
 ---
 
