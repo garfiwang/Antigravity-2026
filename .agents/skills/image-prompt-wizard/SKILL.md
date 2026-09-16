@@ -1,9 +1,12 @@
 ---
 name: image-prompt-wizard
-version: 1.0.0
-description: AI 圖片 Prompt 生成嚮導。當使用者說「啟動圖片提示詞」、「啟動 Prompt 生成器」、「幫我生成圖片 Prompt」、「生成圖片提示詞」、「圖片提示詞」、「image prompt」，或任何想要生成 AI 繪圖咒語的情境，一律使用此技能。技能會透過一系列引導問句（快速模式 3～4 題 / 深度模式 6～8 題），幫使用者確認圖片用途、風格、構圖、色調等關鍵要素，最終輸出可直接使用的英文 Prompt ＋ 中文說明。
+version: 1.1.0
+description: AI 圖片 Prompt 生成嚮導。當使用者說「啟動圖片提示詞」、「啟動 Prompt 生成器」、「幫我生成圖片 Prompt」、「生成圖片提示詞」、「圖片提示詞」、「image prompt」，或任何想要生成 AI 繪圖咒語的情境，一律使用此技能。技能會透過一系列引導問句（快速模式 3～4 題 / 深度模式 6～8 題），幫使用者確認圖片用途、風格、構圖、色調等關鍵要素，最終輸出可直接使用的英文 Prompt、中文 Prompt ＋ 中文說明。
 user-invocable: true
 changelog:
+  - version: 1.1.0
+    date: 2026-09-16
+    note: 輸出格式新增「中文 Prompt」，提供中英文雙語提示詞（支援 DALL-E 3、Recraft 等支援中文繪圖工具，亦可用於語意對照）與中文說明；更新版本紀錄與說明。
   - version: 1.0.0
     date: 2026-06-12
     note: 初始版本。三種模式（快速/深度/一句話生圖），8 層 Prompt 結構，雙語輸出（英文 Prompt＋中文說明），通用格式相容 Midjourney、DALL-E、Stable Diffusion 等主流平台。
@@ -13,7 +16,7 @@ changelog:
 
 ## 技能概覽
 
-這個技能透過對話引導，幫使用者產出高品質的 AI 繪圖 Prompt（通用格式，適用 Midjourney、DALL-E、Stable Diffusion 等主流平台）。
+這個技能透過對話引導，幫使用者產出高品質的 AI 繪圖 Prompt（含英文 Prompt、中文 Prompt 與詳細中文說明，通用格式相容 Midjourney、DALL-E 3、Stable Diffusion、Flux、Recraft 等主流平台）。
 
 ---
 
@@ -104,7 +107,7 @@ changelog:
 
 收到使用者的一句描述後：
 - **不追問任何問題**，直接根據這句話發揮，補充合理的風格、色調、構圖、品質關鍵詞
-- 立即生成完整 Prompt
+- 立即生成完整 Prompt（包含英文 Prompt、中文 Prompt 與中文說明）
 
 ---
 
@@ -113,9 +116,15 @@ changelog:
 ### 輸出格式
 
 ```
-📸 英文 Prompt（可直接貼到 AI 繪圖工具）
+📸 英文 Prompt（可直接貼到 Midjourney、Stable Diffusion、Flux 等英文為主工具）
 
 [English prompt here]
+
+---
+
+🎨 中文 Prompt（可直接貼到 DALL-E 3、Recraft 或支援中文之生圖工具，亦可用於語意對照）
+
+[Chinese prompt here]
 
 ---
 
@@ -123,13 +132,13 @@ changelog:
 
 **用途：** [說明這個 prompt 的設計邏輯]
 **主要關鍵詞：** [列出 5～8 個核心詞彙並解釋]
-**建議平台：** Midjourney / DALL-E / Stable Diffusion（通用）
+**建議平台：** Midjourney / DALL-E 3 / Stable Diffusion / Flux / Recraft（通用）
 **小提醒：** [針對此張圖片的使用建議，例如比例、版本參數等]
 ```
 
 ### Prompt 結構順序
 
-生成英文 Prompt 時，依照以下結構組合：
+生成英文與中文 Prompt 時，皆依照以下 8 層結構組合：
 
 1. **主體** (Subject) — 誰/什麼在畫面中
 2. **動作/狀態** (Action/State) — 在做什麼或呈現什麼狀態
@@ -139,6 +148,11 @@ changelog:
 6. **構圖** (Composition) — 視角與構圖
 7. **品質強化詞** (Quality boosters) — 通用提升詞
 8. **平台參數**（如適用）— 例如 `--ar 16:9`
+
+> **💡 中文 Prompt 撰寫原則：**
+> - 與英文 Prompt 保持相同的核心細節與敘事層次，使用自然生動的繁體中文，避免生硬死板的直譯。
+> - 精準還原光影細節、畫面質感、構圖景深與情緒氛圍。
+> - 參數設定（如 `--ar 16:9`）可直接附於提示詞末尾，方便在支援參數的工具中直接使用。
 
 ### 品質強化詞庫（依風格選用）
 

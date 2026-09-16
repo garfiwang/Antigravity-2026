@@ -1,8 +1,8 @@
 # 🎨 Image Prompt Wizard｜AI 圖片 Prompt 生成嚮導
 
-> 版本：v1.0.0｜適用平台：Midjourney、DALL-E 3、Stable Diffusion、Firefly、Leonardo AI
+> 版本：v1.1.0｜適用平台：Midjourney、DALL-E 3、Stable Diffusion、Flux、Recraft、Firefly、Leonardo AI
 
-透過對話引導，幫你產出高品質的 AI 繪圖英文 Prompt，無需任何繪圖專業知識。
+透過對話引導，幫你產出高品質的 AI 繪圖 Prompt（含英文 Prompt 與中文 Prompt），無需任何繪圖專業知識。
 
 ---
 
@@ -10,8 +10,8 @@
 
 - **三種模式**：快速（3～4 題）/ 深度（6～8 題）/ 一句話生圖
 - **結構化 Prompt**：主體 → 風格 → 色調 → 構圖 → 光線 → 品質強化詞
-- **雙語輸出**：英文 Prompt ＋ 中文設計邏輯說明
-- **平台通用**：輸出格式相容所有主流 AI 繪圖工具
+- **多語系輸出**：英文 Prompt ＋ 中文 Prompt ＋ 中文設計邏輯說明
+- **平台通用**：輸出格式相容所有主流 AI 繪圖工具（支援中文與英文提示詞）
 
 ---
 
@@ -67,11 +67,20 @@ photorealistic, DSLR quality, sharp focus, 8K resolution --ar 16:9
 
 ---
 
+🎨 中文 Prompt
+
+一位身穿深藍色西裝的中年商務專業男性，站在落地辦公室窗邊，
+窗外襯托著黃昏時分的城市天際線，帶有戲劇性側影的電影感光影，
+溫暖金黃色調，淺景深微距對焦，左側保留負空間留白便於排版文字，
+超寫實攝影、DSLR單眼畫質、清晰銳利細節、8K高解析度 --ar 16:9
+
+---
+
 📖 中文說明
 
 用途：適合金融/保險/信託主題的 FB 貼文封面
 主要關鍵詞：cinematic lighting（電影感光線）、negative space（留白構圖）、shallow depth of field（淺景深）
-建議平台：Midjourney v6 / DALL-E 3 / Stable Diffusion XL（通用）
+建議平台：Midjourney v6 / DALL-E 3 / Stable Diffusion XL / Flux / Recraft（通用）
 小提醒：Midjourney 建議加上 --ar 16:9 取得橫幅比例
 ```
 
@@ -120,6 +129,7 @@ photorealistic, DSLR quality, sharp focus, 8K resolution --ar 16:9
 
 | 版本 | 日期 | 說明 |
 |---|---|---|
+| v1.1.0 | 2026-09-16 | 輸出格式新增「中文 Prompt」（支援中文生圖工具與中英雙語對照），升級 Prompt 結構說明與範例 |
 | v1.0.0 | 2026-06-12 | 初始版本：三種模式（快速/深度/一句話生圖），8 層 Prompt 結構，雙語輸出 |
 
-*Last updated: 2026-06-12*
+*Last updated: 2026-09-16*
