@@ -1,5 +1,5 @@
 """
-全域生圖腳本（OpenAI gpt-image-2 版）
+全域生圖腳本（OpenAI gpt-image-2.5-sunburst 版）
 
 用法：
   python draw.py "一隻穿西裝的龍蝦，寫實風格"
@@ -24,9 +24,9 @@ import argparse
 from pathlib import Path
 from datetime import datetime
 
-MODEL = "gpt-image-2"
+MODEL = "gpt-image-2.5-sunburst"
 DEFAULT_SIZE = "1024x1024"
-DEFAULT_QUALITY = "low"
+DEFAULT_QUALITY = "medium"
 DEFAULT_N = 1
 
 
@@ -116,7 +116,7 @@ def main():
     parser.add_argument("--mask", default=None)
     parser.add_argument("--size", default=DEFAULT_SIZE)
     parser.add_argument("--quality", default=DEFAULT_QUALITY,
-                        choices=["low", "medium", "high", "auto"])
+                        choices=["low", "medium", "high", "xhigh", "max", "auto"])
     parser.add_argument("--n", type=int, default=DEFAULT_N)
     parser.add_argument("--name", default="image")
     parser.add_argument("--outdir", default=None)
