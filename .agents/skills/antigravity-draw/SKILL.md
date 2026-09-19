@@ -1,7 +1,7 @@
 ---
 name: antigravity-draw
 version: 2.0.0
-description: AntiGravity 與 OpenAI gpt-image-2 生圖技能。當使用者說「openai 生圖」、「生圖」、「畫圖」、「產生圖片」時載入。
+description: AntiGravity 與 OpenAI gpt-image-2.5-sunburst 生圖技能。當使用者說「openai 生圖」、「生圖」、「畫圖」、「產生圖片」時載入。
 user-invocable: true
 changelog:
   - version: 1.0.0
@@ -10,6 +10,9 @@ changelog:
   - version: 2.0.0
     date: 2026-09-12
     note: 升級為 AntiGravity 雙軌版。整合路線 A（Google 內建生圖）與路線 B（OpenAI gpt-image-2 腳本 draw.py），簡化觸發詞為唯一專屬指令「openai 生圖」，支援自動開啟 Finder 預覽與參數引導。
+  - version: 2.1.0
+    date: 2026-09-20
+    note: 升級 OpenAI 模型為 gpt-image-2.5-sunburst，預設品質提升為 medium。
 ---
 
 # 🎨 生圖技能與 OpenAI 生圖（AntiGravity 雙軌版）
@@ -19,7 +22,7 @@ changelog:
 | 路線 | 模式 | 觸發方式 / 特點 |
 |---|---|---|
 | **路線 A：內建生圖** | 免費 / 零設定 | 說「生圖」、「畫圖」時使用 AntiGravity 內建 `generate_image` 工具生成。 |
-| **路線 B：OpenAI 生圖 (gpt-image-2)** | OpenAI API 專屬 | 說「**openai 生圖**」或指名路線 B 時觸發，呼叫本地 `draw.py` 執行。 |
+| **路線 B：OpenAI 生圖 (gpt-image-2.5-sunburst)** | OpenAI API 專屬 | 說「**openai 生圖**」或指名路線 B 時觸發，呼叫本地 `draw.py` 執行。 |
 
 ---
 
@@ -44,7 +47,7 @@ changelog:
 
 #### 執行指令範例
 ```bash
-# 基本生圖（預設 low 品質，費用約 NT$0.3/張，存至 ./generated/）
+# 基本生圖（預設 medium 品質，存至 ./generated/）
 python3 .agents/skills/antigravity-draw/draw.py "一隻穿西裝打領帶的龍蝦，扁平商務插畫風格" --name lobster
 
 # 16:9 橫幅 (1536x1024)
@@ -62,7 +65,7 @@ python3 .agents/skills/antigravity-draw/draw.py "將背景替換為星空" --edi
 ### 3. 參數說明
 - `prompt`（必填）：圖片描述
 - `--size`：`1024x1024`（預設，正方形）/ `1536x1024`（橫幅）/ `1024x1536`（直式）
-- `--quality`：`low`（預設，經濟快速）/ `medium` / `high`
+- `--quality`：`medium`（預設，平衡高畫質）/ `low` / `high` / `xhigh` / `max`
 - `--n`：張數（預設 1，最多 8）
 - `--name`：輸出的檔名前綴
 - `--outdir`：指定輸出目錄（預設存至 `./slides/generated/` 或 `./generated/`）
