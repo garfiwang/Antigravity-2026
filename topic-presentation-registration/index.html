@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>主題簡報工作坊報名單 - 20260923</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+      --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+      --card-bg: rgba(255, 255, 255, 0.98);
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --focus-ring: rgba(79, 70, 229, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      background: var(--bg-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      color: var(--text-main);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+      background: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.1);
+      padding: 36px 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: #ede9fe;
+      color: #6366f1;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #6366f1;
+    }
+
+    .header-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+
+    .header-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .notice-card {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      font-size: 13.5px;
+      color: #92400e;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 8px;
+    }
+
+    .required-tag {
+      color: #ef4444;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .optional-tag {
+      color: #94a3b8;
+      font-size: 12px;
+      font-weight: normal;
+    }
+
+    .input-wrapper {
+      position: relative;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 13px 16px;
+      font-size: 15px;
+      color: #0f172a;
+      background: #f8fafc;
+      border: 1.5px solid var(--border-color);
+      border-radius: 12px;
+      outline: none;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .form-control:focus {
+      background: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px var(--focus-ring);
+    }
+
+    .form-control::placeholder {
+      color: #94a3b8;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 14px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #ffffff;
+      background: var(--primary);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 24px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+    }
+
+    .submit-btn:hover:not(:disabled) {
+      background: var(--primary-hover);
+      box-shadow: 0 6px 18px rgba(79, 70, 229, 0.45);
+      transform: translateY(-1px);
+    }
+
+    .submit-btn:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+
+    .spinner {
+      width: 20px;
+      height: 20px;
+      border: 2.5px solid rgba(255, 255, 255, 0.3);
+      border-top-color: #ffffff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      display: none;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* 成功卡片 */
+    .success-card {
+      display: none;
+      text-align: center;
+      padding: 16px 8px;
+    }
+
+    .success-icon {
+      width: 64px;
+      height: 64px;
+      background: #dcfce7;
+      color: #16a34a;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .success-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .success-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .action-btn-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .btn-leave {
+      flex: 1;
+      padding: 12px 18px;
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+    }
+
+    .btn-leave:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-reset {
+      flex: 1;
+      padding: 12px 18px;
+      background: #f1f5f9;
+      color: #475569;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-reset:hover {
+      background: #e2e8f0;
+      color: #1e293b;
+    }
+
+    /* 錯誤提示 */
+    .error-msg {
+      display: none;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #dc2626;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 13px;
+      line-height: 1.4;
+      margin-bottom: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 表單區塊 -->
+    <div id="formSection">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        活動報名
+      </div>
+      <h1 class="header-title">主題簡報工作坊報名單</h1>
+      <p class="header-subtitle">主題簡報工作坊報名單 - 20260923</p>
+
+      <div class="notice-card">
+        📌 <strong>備註</strong>：場地費 200元 當天繳交，可用 LinePay 或 現金
+      </div>
+
+      <div id="errorBox" class="error-msg"></div>
+
+      <form id="regForm" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="name">
+            <span>姓名</span>
+            <span class="required-tag">必填 *</span>
+          </label>
+          <div class="input-wrapper">
+            <input type="text" id="name" name="name" class="form-control" placeholder="請輸入您的姓名" required autocomplete="name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">
+            <span>email</span>
+            <span class="required-tag">必填 *</span>
+          </label>
+          <div class="input-wrapper">
+            <input type="email" id="email" name="email" class="form-control" placeholder="請輸入 email（用於接收確認信）" required autocomplete="email">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="lineId">
+            <span>Line ID</span>
+            <span class="optional-tag">選填</span>
+          </label>
+          <div class="input-wrapper">
+            <input type="text" id="lineId" name="lineId" class="form-control" placeholder="請輸入 Line ID（非必填）">
+          </div>
+        </div>
+
+        <button type="submit" id="submitBtn" class="submit-btn">
+          <span class="spinner" id="btnSpinner"></span>
+          <span id="btnText">確認報名並發送確認信</span>
+        </button>
+      </form>
+    </div>
+
+    <!-- 送出成功提示區塊 -->
+    <div id="successSection" class="success-card">
+      <div class="success-icon">✓</div>
+      <h2 class="success-title">報名已完成！</h2>
+      <p class="success-desc">
+        感謝您的報名，資料已成功儲存至試算表。<br>
+        📌 <strong>提醒您</strong>：場地費 200元 當天繳交，可用 LinePay 或 現金。<br>
+        📬 <strong>系統已自動寄出報名確認信</strong>至您的 email，請留意查收！
+      </p>
+      <div class="action-btn-group">
+        <button type="button" class="btn-leave" onclick="handleLeave()">直接離開</button>
+        <button type="button" class="btn-reset" onclick="resetForm()">再次填寫</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var lineId = document.getElementById('lineId').value.trim();
+      var errorBox = document.getElementById('errorBox');
+      var submitBtn = document.getElementById('submitBtn');
+      var btnText = document.getElementById('btnText');
+      var btnSpinner = document.getElementById('btnSpinner');
+
+      errorBox.style.display = 'none';
+
+      // 檢查必填欄位（姓名、email）
+      if (!name || !email) {
+        showError('請填寫姓名與 email！');
+        return;
+      }
+
+      // UI 載入中狀態
+      submitBtn.disabled = true;
+      btnText.textContent = '報名處理中，正在發送確認信...';
+      btnSpinner.style.display = 'inline-block';
+
+      var formData = {
+        name: name,
+        email: email,
+        lineId: lineId
+      };
+
+      // 呼叫 Google Apps Script 後端
+      if (typeof google !== 'undefined' && google.script && google.script.run) {
+        google.script.run
+          .withSuccessHandler(function(response) {
+            submitBtn.disabled = false;
+            btnSpinner.style.display = 'none';
+            btnText.textContent = '確認報名並發送確認信';
+
+            if (response && response.success) {
+              document.getElementById('formSection').style.display = 'none';
+              document.getElementById('successSection').style.display = 'block';
+            } else {
+              showError((response && response.message) ? response.message : '送出失敗，請重試。');
+            }
+          })
+          .withFailureHandler(function(error) {
+            submitBtn.disabled = false;
+            btnSpinner.style.display = 'none';
+            btnText.textContent = '確認報名並發送確認信';
+            showError('連線異常：' + (error.message || error));
+          })
+          .submitRegistration(formData);
+      } else {
+        // 本地預覽測試模式
+        setTimeout(function() {
+          submitBtn.disabled = false;
+          btnSpinner.style.display = 'none';
+          btnText.textContent = '確認報名並發送確認信';
+          document.getElementById('formSection').style.display = 'none';
+          document.getElementById('successSection').style.display = 'block';
+        }, 800);
+      }
+    }
+
+    function showError(msg) {
+      var errorBox = document.getElementById('errorBox');
+      errorBox.textContent = msg;
+      errorBox.style.display = 'block';
+    }
+
+    function resetForm() {
+      document.getElementById('regForm').reset();
+      document.getElementById('successSection').style.display = 'none';
+      document.getElementById('formSection').style.display = 'block';
+      document.getElementById('errorBox').style.display = 'none';
+    }
+
+    function handleLeave() {
+      // 嘗試關閉視窗/分頁
+      try {
+        if (typeof google !== 'undefined' && google.script && google.script.host && google.script.host.close) {
+          google.script.host.close();
+        }
+      } catch(e) {}
+
+      try {
+        window.open('', '_self', '');
+        window.close();
+      } catch(e) {}
+
+      // 若現代瀏覽器安全策略阻擋自動關閉分頁，切換為乾淨的離開提示畫面
+      var successSection = document.getElementById('successSection');
+      if (successSection) {
+        successSection.innerHTML = '' +
+          '<div class="success-icon" style="background: #e0f2fe; color: #0284c7;">👋</div>' +
+          '<h2 class="success-title">感謝您的參與！</h2>' +
+          '<p class="success-desc">您已完成報名手續，報名確認信已發送至您的信箱。<br>現在可以放心手動關閉此分頁或返回應用程式。</p>';
+      }
+    }
+  </script>
+</body>
+</html>
