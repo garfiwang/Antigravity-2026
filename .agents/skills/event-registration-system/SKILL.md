@@ -9,6 +9,8 @@ triggers:
   - 建立報名表
   - 現場簽到系統
   - 活動報名系統
+author: 王執定 Rich <garfiwang@gmail.com>
+license: MIT
 changelog:
   - version: 1.0.0
     date: 2026-09-30
@@ -212,3 +214,13 @@ npx -y qrcode -w 600 -o checkin_qrcode.png "<CHECKIN_SHORT_URL>"
 #### 📢 三、 最新 LINE 宣傳文案（可直接複製發送）
 [提供吸睛的 LINE 宣傳文案]
 ```
+
+---
+
+## 👨‍💻 作者與版權聲明 (Author & Copyright)
+
+* **技能製作人**：王執定 (Rich Wang)
+* **電子信箱**：[garfiwang@gmail.com](mailto:garfiwang@gmail.com)
+* **版權聲明**：Copyright © 2026 王執定 (Rich Wang). All rights reserved.
+* **授權方式**：[MIT License](https://opensource.org/licenses/MIT)
+

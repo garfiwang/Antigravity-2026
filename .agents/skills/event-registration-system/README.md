@@ -119,5 +119,18 @@ AI 即會自動輸出：
 
 ---
 
-## 📄 授權條款 (License)
-MIT License. 歡迎轉載、修改與用於各大社群、商業活動之自動化報名流程！
+## 👨‍💻 作者與製作團隊 (Author & Creator)
+
+* **技能製作人**：王執定 (Rich Wang)
+* **聯絡信箱**：[garfiwang@gmail.com](mailto:garfiwang@gmail.com)
+* **單位識別**：問大師家族辦公室 · Wendashi Family Office
+
+---
+
+## 📄 版權與授權聲明 (Copyright & License)
+
+**Copyright © 2026 王執定 (Rich Wang) <garfiwang@gmail.com>. All rights reserved.**
+
+本開源技能採用 **[MIT License](https://opensource.org/licenses/MIT)** 授權釋出。  
+歡迎各大社群、企業與個人自由使用、修改、整合與商業應用，轉載或二次開發時請保留原作者與製作人資訊。
+
