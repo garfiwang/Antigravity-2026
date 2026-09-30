@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AI 照護大健康講座 報名單</title>
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="AI 照護大健康講座 — 科技賦能，精準健康">
+  <meta property="og:description" content="10月22日 (週六) 14:00-16:00 敦化北路168號1樓體驗館。含現場健康檢測及精緻下午茶，歡迎立即線上預約報名！">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-hover: #0369a1;
+      --secondary: #06b6d4;
+      --accent-orange: #f97316;
+      --accent-rose: #e11d48;
+      --bg-gradient-start: #f0f9ff;
+      --bg-gradient-end: #e0f2fe;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 2px 4px rgba(2, 132, 199, 0.04);
+      --shadow-md: 0 10px 30px rgba(2, 132, 199, 0.08);
+      --shadow-lg: 0 20px 40px rgba(2, 132, 199, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 16px 12px 48px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* Main Card */
+    .card {
+      background: var(--card-bg);
+      border-radius: 24px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Hero Header */
+    .hero-header {
+      background: linear-gradient(135deg, #0284c7 0%, #06b6d4 100%);
+      padding: 32px 24px 28px;
+      text-align: center;
+      color: #ffffff;
+      position: relative;
+    }
+
+    .hero-header::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 16px;
+      background: #ffffff;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .category-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 5px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: #e0f2fe;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    /* Highlights Pills */
+    .highlights-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .highlight-pill {
+      background: #ffffff;
+      color: #0369a1;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Content Area */
+    .content-body {
+      padding: 24px 24px 32px;
+    }
+
+    /* Event Details Box */
+    .info-box {
+      background: #f8fafc;
+      border-radius: 18px;
+      padding: 20px;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 24px;
+    }
+
+    .info-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #0284c7;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .info-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .info-icon {
+      font-size: 17px;
+      line-height: 1.3;
+      min-width: 22px;
+    }
+
+    .info-label {
+      color: var(--text-muted);
+      font-size: 13px;
+      min-width: 52px;
+    }
+
+    .info-value {
+      font-weight: 600;
+      color: var(--text-main);
+      flex: 1;
+    }
+
+    .info-value.highlight-date {
+      color: #0284c7;
+      font-weight: 700;
+    }
+
+    .info-value.highlight-fee {
+      color: var(--accent-rose);
+      font-weight: 800;
+    }
+
+    .map-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 6px;
+      font-size: 12px;
+      color: #0284c7;
+      text-decoration: none;
+      font-weight: 700;
+      background: #e0f2fe;
+      padding: 4px 10px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+
+    .map-btn:hover {
+      background: #bae6fd;
+    }
+
+    /* Form Styles */
+    .form-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+
+    .req {
+      color: var(--accent-rose);
+      margin-left: 2px;
+    }
+
+    .form-control {
+      width: 100%;
+      height: 48px;
+      border: 1.5px solid var(--border-color);
+      border-radius: 12px;
+      padding: 0 16px;
+      font-size: 15px;
+      color: var(--text-main);
+      background: #ffffff;
+      outline: none;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    textarea.form-control {
+      height: 84px;
+      padding: 12px 16px;
+      resize: vertical;
+    }
+
+    .form-control:focus {
+      border-color: #0284c7;
+      box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.12);
+    }
+
+    .form-control::placeholder {
+      color: #94a3b8;
+    }
+
+    .field-hint {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 5px;
+    }
+
+    /* Submit Button */
+    .btn-submit {
+      width: 100%;
+      height: 52px;
+      background: linear-gradient(135deg, #0284c7 0%, #06b6d4 100%);
+      color: #ffffff;
+      border: none;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.3);
+      transition: all 0.2s ease;
+      margin-top: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-submit:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(2, 132, 199, 0.4);
+    }
+
+    .btn-submit:active:not(:disabled) {
+      transform: translateY(1px);
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    .spinner {
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: #ffffff;
+      animation: spin 0.8s ease-in-out infinite;
+      display: none;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Modal / Success View */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+      z-index: 1000;
+    }
+
+    .modal-card {
+      background: #ffffff;
+      border-radius: 22px;
+      max-width: 440px;
+      width: 100%;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+      animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: scale(0.92); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .success-icon-box {
+      width: 64px;
+      height: 64px;
+      background: #dcfce7;
+      color: #16a34a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin: 0 auto 16px;
+    }
+
+    .modal-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .modal-desc {
+      font-size: 14px;
+      color: #64748b;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .modal-summary-box {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 14px;
+      text-align: left;
+      font-size: 13px;
+      color: #334155;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .btn-modal-action {
+      display: block;
+      width: 100%;
+      height: 46px;
+      line-height: 46px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      transition: all 0.2s;
+    }
+
+    .btn-modal-primary {
+      background: #0284c7;
+      color: #ffffff;
+    }
+
+    .btn-modal-secondary {
+      background: #f1f5f9;
+      color: #475569;
+    }
+
+    .btn-modal-secondary:hover {
+      background: #e2e8f0;
+    }
+
+    /* Footer */
+    .form-footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    .security-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: #64748b;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      
+      <!-- Top Hero Banner -->
+      <div class="hero-header">
+        <div class="category-badge">
+          <span>🤖</span> AI HEALTHCARE FORUM
+        </div>
+        <h1 class="hero-title">AI 照護大健康講座</h1>
+        <p class="hero-subtitle">科技賦能，精準健康</p>
+
+      </div>
+
+      <!-- Main Body -->
+      <div class="content-body">
+        
+        <!-- Event Details Box -->
+        <div class="info-box">
+          <div class="info-title">
+            <span>📌</span> 活動詳細資訊
+          </div>
+          
+          <div class="info-item">
+            <span class="info-icon">📅</span>
+            <span class="info-label">時間</span>
+            <span class="info-value highlight-date">10月22日 (週六) 14:00 - 16:00<br><small style="color:#64748b; font-weight:normal;">(13:45 開放報到入場)</small></span>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <span class="info-label">地點</span>
+            <span class="info-value">
+              敦化北路168號1樓體驗館<br>
+              <small style="color:#64748b; font-weight:normal;">台北市松山區敦化北路168號1樓</small><br>
+              <a href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E5%8C%97%E5%B8%82%E6%9D%BE%E5%B1%B1%E5%8D%80%E6%95%A6%E5%8C%96%E5%8C%97%E8%B7%AF168%E8%99%9F" target="_blank" class="map-btn">
+                🧭 開啟 Google Maps 路線導航
+              </a>
+            </span>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">💰</span>
+            <span class="info-label">費用</span>
+            <span class="info-value highlight-fee">
+              每位 $400<br>
+              <small style="color:#64748b; font-weight:normal;">(含現場專業檢測及精緻下午茶，當天現場繳交)</small>
+            </span>
+          </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="form-title">
+          <span>📝</span> 請填寫預約報名資訊
+        </div>
+
+        <form id="regForm" onsubmit="handleFormSubmit(event)">
+          <!-- 姓名 -->
+          <div class="form-group">
+            <label class="form-label" for="userName">您的姓名<span class="req">*</span></label>
+            <input type="text" id="userName" name="name" class="form-control" placeholder="請輸入姓名" required autocomplete="name">
+          </div>
+
+          <!-- 聯絡電話 -->
+          <div class="form-group">
+            <label class="form-label" for="userPhone">聯絡手機 / 電話 <span style="font-weight:normal; color:#94a3b8; font-size:12px;">(選填)</span></label>
+            <input type="tel" id="userPhone" name="phone" class="form-control" placeholder="例：0912-345-678（選填）" autocomplete="tel">
+            <div class="field-hint">方便主辦單位入場身分核對或臨時聯繫</div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="userEmail">電子信箱 Email <span style="font-weight:normal; color:#94a3b8; font-size:12px;">(選填)</span></label>
+            <input type="email" id="userEmail" name="email" class="form-control" placeholder="例：service@example.com（選填）" autocomplete="email">
+            <div class="field-hint">填寫後系統將自動發送「報名確認信」與「活動行前提醒」至此信箱</div>
+          </div>
+
+          <!-- Line ID -->
+          <div class="form-group">
+            <label class="form-label" for="userLine">Line ID <span style="font-weight:normal; color:#94a3b8; font-size:12px;">(選填)</span></label>
+            <input type="text" id="userLine" name="lineId" class="form-control" placeholder="方便活動即時聯絡（非必填）">
+          </div>
+
+          <!-- 備註與期待 -->
+          <div class="form-group">
+            <label class="form-label" for="userRemarks">備註或期待了解的健康議題 <span style="font-weight:normal; color:#94a3b8; font-size:12px;">(選填)</span></label>
+            <textarea id="userRemarks" name="remarks" class="form-control" placeholder="例如：銀髮照護、智慧穿戴量測、睡眠或心血管健康等"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="submitBtn" class="btn-submit">
+            <div class="spinner" id="btnSpinner"></div>
+            <span id="btnText">立即確認報名</span>
+          </button>
+        </form>
+
+        <div class="form-footer">
+          <div class="security-badge">
+            <span>🔒</span> 資料傳輸經加密保護，僅供活動聯絡使用
+          </div>
+          <div>© 2026 AI 照護大健康講座 主辦團隊</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-card">
+      <div class="success-icon-box">✓</div>
+      <h3 class="modal-title">報名登記成功！</h3>
+      <p class="modal-desc">
+        系統已將活動確認信寄送至您的電子郵件信箱，敬請留意收件匣。
+      </p>
+
+      <div class="modal-summary-box" id="modalSummaryContent">
+        <!-- 填入摘要 -->
+      </div>
+
+      <a href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E5%8C%97%E5%B8%82%E6%9D%BE%E5%B1%B1%E5%8D%80%E6%95%A6%E5%8C%96%E5%8C%97%E8%B7%AF168%E8%99%9F" target="_blank" class="btn-modal-action btn-modal-primary">
+        🧭 路線導航（敦化北路168號1樓）
+      </a>
+
+      <button type="button" onclick="closeModalAndReload()" class="btn-modal-action btn-modal-secondary">
+        關閉視窗
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function handleFormSubmit(e) {
+      e.preventDefault();
+
+      var name = document.getElementById('userName').value.trim();
+      var phone = document.getElementById('userPhone').value.trim();
+      var email = document.getElementById('userEmail').value.trim();
+      var lineId = document.getElementById('userLine').value.trim();
+      var remarks = document.getElementById('userRemarks').value.trim();
+
+      if (!name) {
+        alert('請填寫您的姓名！');
+        return;
+      }
+
+      var submitBtn = document.getElementById('submitBtn');
+      var btnSpinner = document.getElementById('btnSpinner');
+      var btnText = document.getElementById('btnText');
+
+      submitBtn.disabled = true;
+      btnSpinner.style.display = 'inline-block';
+      btnText.innerText = '處理中，請稍候...';
+
+      var formData = {
+        name: name,
+        phone: phone,
+        email: email,
+        lineId: lineId,
+        remarks: remarks
+      };
+
+      if (typeof google !== 'undefined' && google.script && google.script.run) {
+        google.script.run
+          .withSuccessHandler(function(response) {
+            submitBtn.disabled = false;
+            btnSpinner.style.display = 'none';
+            btnText.innerText = '立即確認報名';
+
+            if (response && response.success) {
+              showSuccessModal(formData, response.data);
+            } else {
+              alert('報名送出失敗：' + (response ? response.message : '未知錯誤，請稍候重試'));
+            }
+          })
+          .withFailureHandler(function(error) {
+            submitBtn.disabled = false;
+            btnSpinner.style.display = 'none';
+            btnText.innerText = '立即確認報名';
+            alert('系統連線異常：' + error.message);
+          })
+          .submitRegistration(formData);
+      } else {
+        // 本地預覽測試
+        setTimeout(function() {
+          submitBtn.disabled = false;
+          btnSpinner.style.display = 'none';
+          btnText.innerText = '立即確認報名';
+          showSuccessModal(formData, {
+            eventDate: '10月22日 (週六)',
+            eventTime: '14:00 - 16:00',
+            venue: '敦化北路168號1樓體驗館',
+            feeNote: '每位 $400（含現場檢測及精緻下午茶）'
+          });
+        }, 1000);
+      }
+    }
+
+    function showSuccessModal(form, eventData) {
+      var emailNotice = form.email 
+        ? '系統已將活動確認信寄送至您的電子郵件信箱（' + form.email + '），敬請留意收件匣。' 
+        : '您的預約登記已完成！活動當天請直接至現場 1 樓報到處核對姓名入場。';
+      document.querySelector('.modal-desc').innerText = emailNotice;
+
+      var summaryHtml = 
+        '• <strong>報名姓名</strong>：' + form.name + '<br>' +
+        '• <strong>聯絡電話</strong>：' + (form.phone || '未填寫') + '<br>' +
+        '• <strong>電子信箱</strong>：' + (form.email || '未填寫') + '<br>' +
+        '• <strong>活動時間</strong>：' + (eventData ? eventData.eventDate : '10月22日 (週六)') + ' 14:00 - 16:00<br>' +
+        '• <strong>活動地點</strong>：敦化北路168號1樓體驗館<br>' +
+        '• <strong>現場費用</strong>：每位 $400（含檢測與精緻下午茶）';
+
+      document.getElementById('modalSummaryContent').innerHTML = summaryHtml;
+      document.getElementById('successModal').style.display = 'flex';
+    }
+
+    function closeModalAndReload() {
+      document.getElementById('successModal').style.display = 'none';
+      document.getElementById('regForm').reset();
+    }
+  </script>
+</body>
+</html>
