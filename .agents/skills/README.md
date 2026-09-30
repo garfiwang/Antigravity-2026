@@ -30,6 +30,9 @@
   * `morning-briefing` (v1.1.0)：早晨日報與任務彙整
   * `notion-note` / `notion-inspiration-box`：Notion 資料庫快速記錄
   * `obsidian-weekly-review`：Obsidian 週度知識整理
+  * `short-url` (v1.0.0)：Reurl.cc 短網址產生與管理
+* **活動與表單系統**：
+  * `event-registration-system` (v1.0.0)：活動線上報名與現場掃碼簽到全自動系統（含後台試算表雙重連動、短網址、報名與行前提醒 Email） [說明檔](event-registration-system/README.md)
 
 ---
 
