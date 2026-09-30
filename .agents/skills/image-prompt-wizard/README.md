@@ -19,7 +19,7 @@
 
 ```bash
 # 在 Claude Code 中安裝此技能
-claude skills add garfiwang/claude-skills --path 01-content-creation/image-prompt-wizard
+claude skills add garfiwang/AI-skill --path 01-content-creation/image-prompt-wizard
 ```
 
 安裝後，在 Claude Code 對話中輸入以下任一關鍵字即可觸發：
