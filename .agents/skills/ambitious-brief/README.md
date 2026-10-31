@@ -2,7 +2,7 @@
 
 > **把一句「幫我做 X」升級成一整件交給 AI 的高維度工作任務說明書。**
 
-[![Version: 1.0.0](https://img.shields.io/badge/version-1.0.0-blue.svg)](./CHANGELOG.md)
+[![Version: 1.0.1](https://img.shields.io/badge/version-1.0.1-blue.svg)](./CHANGELOG.md)
 [![Platform: Claude Code & Antigravity](https://img.shields.io/badge/platform-Claude_Code_%7C_Antigravity-orange.svg)](#-安裝方式)
 [![Methodology: Felix Rieseberg](https://img.shields.io/badge/methodology-Anthropic_Engineering-purple.svg)](https://felixrieseberg.com/)
 [![Troubleshooting Guide](https://img.shields.io/badge/docs-Troubleshooting_Guide-red.svg)](./TROUBLESHOOTING.md)
@@ -22,7 +22,9 @@
 在 **Claude Code** 或 **Google Antigravity** 對話中，輸入以下任一指令即可自動觸發：
 
 * **`提升任務：[你的任務]`**（最推薦，簡潔明瞭！）
-* **`提升任務`**
+* **`優化任務：[你的任務]`**
+* **`強化任務：[你的任務]`**
+* **`提升任務`** / **`優化任務`** / **`強化任務`**
 * **`用三個方法幫我升級這個任務：[你的任務]`**
 * **`幫我把這件事交代得更有野心：[你的任務]`**
 * **`往上想往下挖往外借：[你的任務]`**
