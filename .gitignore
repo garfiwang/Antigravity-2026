@@ -17,6 +17,42 @@ Desktop.ini
 credentials.*
 secrets.*
 service-account*.json
+.clasp.json
+.clasprc.json
+
+# Private Office & Financial documents
+*.doc
+*.xlsx
+*.xls
+*.csv
+
+# Private customer projects and personal records
+專案-*/
+在職證明*
+*保單*
+*試算*
+*獎金*
+*佣金*
+HTML - */
+BNI 簡報ppt檔/
+ESG 綱站/
+changhui-banquet-registration-*/
+keynote-registration-*/
+bni-trust-registration-*/
+bni-meeting/
+
+# Chat and transcript dumps
+chatgpt_share_backend.json
+transcript_*.json
+transcript_all.json
+
+# Python virtual environments & bytecode
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+
 
 # IDEs and editors
 .vscode/

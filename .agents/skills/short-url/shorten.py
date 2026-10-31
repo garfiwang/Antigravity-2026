@@ -13,7 +13,6 @@ import urllib.request
 import urllib.error
 
 DEFAULT_API_URL = "https://api.reurl.cc/shorten"
-FALLBACK_API_KEY = "YOUR_REURL_API_KEY"
 
 def get_api_key(custom_key=None):
     if custom_key:
@@ -44,7 +43,7 @@ def get_api_key(custom_key=None):
         except Exception:
             pass
 
-    return FALLBACK_API_KEY
+    return None
 
 def copy_to_clipboard(text):
     """將文字複製到 macOS 剪貼簿"""
@@ -65,6 +64,8 @@ def shorten_url(url, utm=None, api_key=None, api_url=None):
     :return: dict 包含 {"res": "success", "short_url": "...", "original_url": "..."}
     """
     key = get_api_key(api_key)
+    if not key:
+        raise ValueError("未偵測到 REURL_API_KEY。請設定環境變數 REURL_API_KEY 或在 ~/.reurl.env 中設定。")
     endpoint = api_url or os.environ.get("REURL_API_URL", DEFAULT_API_URL)
     
     if not url:
