@@ -31,6 +31,8 @@
   * `notion-note` / `notion-inspiration-box`：Notion 資料庫快速記錄
   * `obsidian-weekly-review`：Obsidian 週度知識整理
   * `short-url` (v1.0.0)：Reurl.cc 短網址產生與管理
+* **任務規劃與升級**：
+  * `ambitious-brief` (v1.0.0)：往上想一層・往下挖一層・往外借一招，將簡單指令升級為專業 AI 任務 Brief（觸發詞：`提升任務：[你的任務]`、`用三個方法幫我升級這個任務`） [說明檔](ambitious-brief/README.md)
 * **活動與表單系統**：
   * `event-registration-system` (v1.0.0)：活動線上報名與現場掃碼簽到全自動系統（含後台試算表雙重連動、短網址、報名與行前提醒 Email） [說明檔](event-registration-system/README.md)
 
